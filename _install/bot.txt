@@ -1,0 +1,1 @@
+取消收入惩罚机制：修改 OnEntityKilled.lua 的 204 行

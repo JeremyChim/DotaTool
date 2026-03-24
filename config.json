@@ -1,0 +1,28 @@
+{
+    "sa": "+25%",
+    "sp": "+50%",
+    "sa_cd": "-25%",
+    "sp_cd": "-50%",
+    "last_path": "C:\\Users\\zhanqingming\\Desktop\\DotaTool\\vpk\\pak01_dir\\scripts\\npc\\heroes\\npc_dota_hero_razor.txt",
+    "dota_path": "D:\\APP\\Steam\\steamapps\\common\\dota 2 beta",
+    "bot_path": "D:\\APP\\Steam\\steamapps\\workshop\\content\\570\\3246316298",
+    "bot_cmd": "sv_cheats 1; script_reload_code bots/fretbots",
+    "steam_cmd": "+con_enable 1 -noforcemaccel -noforcemspd -useforcedmparms -windowed -noborder -high -map dota -nod3d9ex -nohltv -novr -nojoy",
+    "xp": "*2",
+    "gold": "*2",
+    "times": [
+        "0:00",
+        "5:00",
+        "10:00",
+        "15:00",
+        "20:00",
+        "25:00"
+    ],
+    "infos": [
+        [
+            "item_aghanims_shard",
+            "ItemInitialStockTime",
+            "540.0"
+        ]
+    ]
+}
