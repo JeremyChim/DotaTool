@@ -532,11 +532,13 @@ QListView {
     </property>
     <addaction name="action_1"/>
     <addaction name="action_0"/>
+    <addaction name="action_a1"/>
     <addaction name="action_25"/>
     <addaction name="action_33"/>
     <addaction name="action_50"/>
     <addaction name="action_75"/>
     <addaction name="action_100"/>
+    <addaction name="action_c1"/>
     <addaction name="action_c25"/>
     <addaction name="action_c33"/>
     <addaction name="action_c50"/>
@@ -923,6 +925,22 @@ QListView {
   <action name="action_gi_open">
    <property name="text">
     <string>打开gi</string>
+   </property>
+  </action>
+  <action name="action_c1">
+   <property name="text">
+    <string>-1</string>
+   </property>
+   <property name="shortcut">
+    <string>-</string>
+   </property>
+  </action>
+  <action name="action_a1">
+   <property name="text">
+    <string>+1</string>
+   </property>
+   <property name="shortcut">
+    <string>+</string>
    </property>
   </action>
  </widget>

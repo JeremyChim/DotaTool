@@ -44,16 +44,19 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         self.action_sp.triggered.connect(self.sp)
 
         # 预设
-        self.action_1.triggered.connect(self.fun1)
-        self.action_0.triggered.connect(self.fun0)
-        self.action_25.triggered.connect(self.fun25)
-        self.action_50.triggered.connect(self.fun50)
-        self.action_75.triggered.connect(self.fun75)
-        self.action_100.triggered.connect(self.fun100)
-        self.action_c25.triggered.connect(self.fun_25)
-        self.action_c33.triggered.connect(self.fun_33)
-        self.action_c50.triggered.connect(self.fun_50)
-        self.action_c75.triggered.connect(self.fun_75)
+        self.action_1.triggered.connect(self.fun_1)
+        self.action_0.triggered.connect(self.fun_0)
+        self.action_a1.triggered.connect(self.fun_a1)
+        self.action_25.triggered.connect(self.fun_25)
+        self.action_33.triggered.connect(self.fun_33)
+        self.action_50.triggered.connect(self.fun_50)
+        self.action_75.triggered.connect(self.fun_75)
+        self.action_100.triggered.connect(self.fun_100)
+        self.action_c1.triggered.connect(self.fun_c1)
+        self.action_c25.triggered.connect(self.fun_c25)
+        self.action_c33.triggered.connect(self.fun_c33)
+        self.action_c50.triggered.connect(self.fun_c50)
+        self.action_c75.triggered.connect(self.fun_c75)
 
         # 窗口
         self.action_top.triggered.connect(self.top)
@@ -230,37 +233,43 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         except  Exception as e:
             self.statusbar.showMessage(str(e))
 
-    def fun1(self):
+    def fun_1(self):
         self._fun("=1")
 
-    def fun0(self):
+    def fun_0(self):
         self._fun("=0")
 
-    def fun25(self):
-        self._fun("+25%")
-
-    def fun33(self):
-        self._fun("+33%")
-
-    def fun50(self):
-        self._fun("+50%")
-
-    def fun75(self):
-        self._fun("+75%")
-
-    def fun100(self):
-        self._fun("+100%")
+    def fun_a1(self):
+        self._fun("+1")
 
     def fun_25(self):
-        self._fun("-25%")
+        self._fun("+25%")
 
     def fun_33(self):
-        self._fun("-33%")
+        self._fun("+33%")
 
     def fun_50(self):
-        self._fun("-50%")
+        self._fun("+50%")
 
     def fun_75(self):
+        self._fun("+75%")
+
+    def fun_100(self):
+        self._fun("+100%")
+
+    def fun_c1(self):
+        self._fun("-1")
+
+    def fun_c25(self):
+        self._fun("-25%")
+
+    def fun_c33(self):
+        self._fun("-33%")
+
+    def fun_c50(self):
+        self._fun("-50%")
+
+    def fun_c75(self):
         self._fun("-75%")
 
     def top(self):
