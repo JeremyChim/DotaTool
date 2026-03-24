@@ -3,7 +3,7 @@
     "sp": "+50%",
     "sa_cd": "-25%",
     "sp_cd": "-50%",
-    "last_path": "D:\\DotaTool\\vpk\\pak01_dir\\scripts\\npc\\heroes\\npc_dota_hero_razor.txt",
+    "last_path": "D:\\DotaTool\\vpk\\pak01_dir\\scripts\\npc\\heroes\\npc_dota_hero_morphling.txt",
     "dota_path": "D:\\APP\\Steam\\steamapps\\common\\dota 2 beta",
     "bot_path": "D:\\APP\\Steam\\steamapps\\workshop\\content\\570\\3246316298",
     "bot_cmd": "sv_cheats 1; script_reload_code bots/fretbots",

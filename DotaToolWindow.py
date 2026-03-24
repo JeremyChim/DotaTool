@@ -42,6 +42,7 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         self.action_cd.triggered.connect(self.cd)
         self.action_sa.triggered.connect(self.sa)
         self.action_sp.triggered.connect(self.sp)
+        self.action_ch.triggered.connect(self.ch)
 
         # 预设
         self.action_1.triggered.connect(self.fun_1)
@@ -228,6 +229,16 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
             sp = read_config()["sp"]
             line = self._read_line()
             line2 = self._update_ab1(line, sa, sp)
+            self._write_line(line2)
+            self.undo_board.append(line)
+        except  Exception as e:
+            self.statusbar.showMessage(str(e))
+
+    def ch(self):
+        """充能"""
+        try:
+            line = self._read_line()
+            line2 = self._ch(line)
             self._write_line(line2)
             self.undo_board.append(line)
         except  Exception as e:
@@ -463,6 +474,30 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         except  Exception as e:
             self.statusbar.showMessage(str(e))
 
+    def _ch(self, line):
+        mod = '''
+"AbilityCharges"		
+{
+    "value"						"1"
+    "special_bonus_shard"		"+1"
+    "special_bonus_scepter"		"+1"
+}
+"AbilityChargeRestoreTime"
+{
+    "value"		"21 18 15 12"
+    "special_bonus_shard"		"-25%"
+    "special_bonus_scepter"		"-50%"
+    "special_bonus_unique_morphling_waveform_cooldown"			"-40%"
+}
+"AbilityCooldown"		
+{
+    "value"		"0"
+    "special_bonus_shard"		"-25%"
+    "special_bonus_scepter"		"-50%"
+    "special_bonus_unique_morphling_waveform_cooldown"			"-40%"
+}
+'''
+        return line + mod
     # endregion
 
 

@@ -525,6 +525,7 @@ QListView {
     <addaction name="action_cd"/>
     <addaction name="action_sa"/>
     <addaction name="action_sp"/>
+    <addaction name="action_ch"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
@@ -941,6 +942,14 @@ QListView {
    </property>
    <property name="shortcut">
     <string>+</string>
+   </property>
+  </action>
+  <action name="action_ch">
+   <property name="text">
+    <string>充能</string>
+   </property>
+   <property name="shortcut">
+    <string>H</string>
    </property>
   </action>
  </widget>
