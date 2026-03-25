@@ -224,6 +224,9 @@ def open_gi():
     gi_path = os.path.join(read_config()['dota_path'], "game", "dota", "gameinfo_branchspecific.gi")
     os.startfile(gi_path)
 
+def open_vpk():
+    vpk_path = os.path.join(read_config()['dota_path'], "game", "dota", "pak01_dir.vpk")
+    os.startfile(vpk_path)
 
 if __name__ == '__main__':
     # copy_steam_cmd()
@@ -238,4 +241,5 @@ if __name__ == '__main__':
     # open_general_lua()
     # open_on_entity_killed_lua()
     # clean_all_skin()
-    open_gi()
+    # open_gi()
+    open_vpk()

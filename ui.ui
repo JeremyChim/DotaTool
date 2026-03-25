@@ -580,6 +580,7 @@ QListView {
     <addaction name="separator"/>
     <addaction name="action_general_lua"/>
     <addaction name="action_killed_lua"/>
+    <addaction name="action_vpk_file"/>
    </widget>
    <addaction name="menua"/>
    <addaction name="menub"/>
@@ -956,6 +957,11 @@ QListView {
   <action name="action_skin_dir3">
    <property name="text">
     <string>打开Dota2SkinChanger3</string>
+   </property>
+  </action>
+  <action name="action_vpk_file">
+   <property name="text">
+    <string>打开pak01_dir.vpk</string>
    </property>
   </action>
  </widget>

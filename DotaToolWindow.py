@@ -83,6 +83,7 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         self.action_skin_dir3.triggered.connect(self.skin_dir3)
         self.action_general_lua.triggered.connect(self.general_lua)
         self.action_killed_lua.triggered.connect(self.killed_lua)
+        self.action_vpk_file.triggered.connect(self.vpk_file)
 
     def load(self):
         """载入"""
@@ -387,6 +388,11 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         """打开OnEntityKilled.lua"""
         open_on_entity_killed_lua()
         self.statusbar.showMessage("打开OnEntityKilled.lua文件！")
+
+    def vpk_file(self):
+        """打开pak01_dir.vpk"""
+        open_vpk()
+        self.statusbar.showMessage("打开vpk文件！")
 
     # region 工具方法
 
