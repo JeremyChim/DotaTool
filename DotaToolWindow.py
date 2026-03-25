@@ -80,6 +80,7 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         self.action_mod_dir.triggered.connect(self.mod_dir)
         self.action_skin_dir.triggered.connect(self.skin_dir)
         self.action_skin_dir2.triggered.connect(self.skin_dir2)
+        self.action_skin_dir3.triggered.connect(self.skin_dir3)
         self.action_general_lua.triggered.connect(self.general_lua)
         self.action_killed_lua.triggered.connect(self.killed_lua)
 
@@ -370,6 +371,11 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
     def skin_dir2(self):
         """打开 Dota2SkinChanger2 文件夹"""
         open_skin_dir2()
+        self.statusbar.showMessage("打开 Dota2SkinChanger2 文件夹！")
+
+    def skin_dir3(self):
+        """打开 Dota2SkinChanger3 文件夹"""
+        open_skin_dir3()
         self.statusbar.showMessage("打开 Dota2SkinChanger2 文件夹！")
 
     def general_lua(self):

@@ -38,11 +38,13 @@
 
 			Game				Dota2SkinChanger
 			Game				Dota2SkinChanger2
+			Game				Dota2SkinChanger3
 			Game				dota
 			Game				core
 
 			Mod					Dota2SkinChanger
 			Mod					Dota2SkinChanger2
+			Mod					Dota2SkinChanger3
 			Mod					dota
 
 			Write				dota

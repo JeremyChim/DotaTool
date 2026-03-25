@@ -194,14 +194,19 @@ def open_skin_dir2():
     os.makedirs(skin_path, exist_ok=True)
     os.startfile(skin_path)
 
+def open_skin_dir3():
+    skin_path = os.path.join(read_config()['dota_path'], "game", "Dota2SkinChanger3")
+    os.makedirs(skin_path, exist_ok=True)
+    os.startfile(skin_path)
+
 
 def clean_all_skin():
     skin_file = os.path.join(read_config()['dota_path'], "game", "Dota2SkinChanger", "pak01_dir.vpk")
     skin_file2 = os.path.join(read_config()['dota_path'], "game", "Dota2SkinChanger2", "pak01_dir.vpk")
-    if os.path.exists(skin_file):
-        os.remove(skin_file)
-    if os.path.exists(skin_file2):
-        os.remove(skin_file2)
+    skin_file3 = os.path.join(read_config()['dota_path'], "game", "Dota2SkinChanger3", "pak01_dir.vpk")
+    if os.path.exists(skin_file): os.remove(skin_file)
+    if os.path.exists(skin_file2): os.remove(skin_file2)
+    if os.path.exists(skin_file2): os.remove(skin_file3)
 
 
 def open_general_lua():

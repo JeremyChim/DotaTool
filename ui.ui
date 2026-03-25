@@ -576,6 +576,7 @@ QListView {
     <addaction name="action_mod_dir"/>
     <addaction name="action_skin_dir"/>
     <addaction name="action_skin_dir2"/>
+    <addaction name="action_skin_dir3"/>
     <addaction name="separator"/>
     <addaction name="action_general_lua"/>
     <addaction name="action_killed_lua"/>
@@ -950,6 +951,11 @@ QListView {
    </property>
    <property name="shortcut">
     <string>H</string>
+   </property>
+  </action>
+  <action name="action_skin_dir3">
+   <property name="text">
+    <string>打开Dota2SkinChanger3</string>
    </property>
   </action>
  </widget>
