@@ -63,7 +63,7 @@ def copy_bot_cmd():
 def copy_steam_cmd():
     """复制steam指令"""
     config = read_config()
-    steam_cmd = config["bot_cmd"]
+    steam_cmd = config["steam_cmd"]
     pyperclip.copy(steam_cmd)
     print(steam_cmd)
 
