@@ -463,7 +463,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
 }
 
 QListView {
-	selection-background-color:#007b50;
+	selection-background-color:#FFFFFF;
 	background-color:#1e1d23;
 	border-style: solid;
 	border-top-color: transparent;
@@ -581,6 +581,7 @@ QListView {
     <addaction name="action_general_lua"/>
     <addaction name="action_killed_lua"/>
     <addaction name="action_vpk_file"/>
+    <addaction name="action_config"/>
    </widget>
    <addaction name="menua"/>
    <addaction name="menub"/>
@@ -962,6 +963,11 @@ QListView {
   <action name="action_vpk_file">
    <property name="text">
     <string>打开pak01_dir.vpk</string>
+   </property>
+  </action>
+  <action name="action_config">
+   <property name="text">
+    <string>打开config.json</string>
    </property>
   </action>
  </widget>

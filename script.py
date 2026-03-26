@@ -122,6 +122,7 @@ def update_neutral_items():
 
 
 def update_items():
+    """更新物品"""
     config = read_config()
     infos = config["infos"]
     lines = read_file(items_path)
@@ -194,6 +195,7 @@ def open_skin_dir2():
     os.makedirs(skin_path, exist_ok=True)
     os.startfile(skin_path)
 
+
 def open_skin_dir3():
     skin_path = os.path.join(read_config()['dota_path'], "game", "Dota2SkinChanger3")
     os.makedirs(skin_path, exist_ok=True)
@@ -220,13 +222,21 @@ def open_on_entity_killed_lua():
     lua_path = os.path.join(bot_path, "FretBots", "OnEntityKilled.lua")
     os.startfile(lua_path)
 
+
 def open_gi():
     gi_path = os.path.join(read_config()['dota_path'], "game", "dota", "gameinfo_branchspecific.gi")
     os.startfile(gi_path)
 
+
 def open_vpk():
     vpk_path = os.path.join(read_config()['dota_path'], "game", "dota", "pak01_dir.vpk")
     os.startfile(vpk_path)
+
+
+def open_config():
+    config_path = os.path.join(path, "config.json")
+    os.startfile(config_path)
+
 
 if __name__ == '__main__':
     # copy_steam_cmd()
@@ -242,4 +252,5 @@ if __name__ == '__main__':
     # open_on_entity_killed_lua()
     # clean_all_skin()
     # open_gi()
-    open_vpk()
+    # open_vpk()
+    open_config()

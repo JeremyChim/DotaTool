@@ -464,7 +464,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QListView {\n"
-"    selection-background-color:#007b50;\n"
+"    selection-background-color:#FFFFFF;\n"
 "    background-color:#1e1d23;\n"
 "    border-style: solid;\n"
 "    border-top-color: transparent;\n"
@@ -615,6 +615,8 @@ class Ui_MainWindow(object):
         self.action_skin_dir3.setObjectName("action_skin_dir3")
         self.action_vpk_file = QtWidgets.QAction(MainWindow)
         self.action_vpk_file.setObjectName("action_vpk_file")
+        self.action_config = QtWidgets.QAction(MainWindow)
+        self.action_config.setObjectName("action_config")
         self.menua.addAction(self.action_load)
         self.menua.addAction(self.action_reload)
         self.menua.addAction(self.action_save)
@@ -672,6 +674,7 @@ class Ui_MainWindow(object):
         self.menu_4.addAction(self.action_general_lua)
         self.menu_4.addAction(self.action_killed_lua)
         self.menu_4.addAction(self.action_vpk_file)
+        self.menu_4.addAction(self.action_config)
         self.menubar.addAction(self.menua.menuAction())
         self.menubar.addAction(self.menub.menuAction())
         self.menubar.addAction(self.menu.menuAction())
@@ -777,3 +780,4 @@ class Ui_MainWindow(object):
         self.action_ch.setShortcut(_translate("MainWindow", "H"))
         self.action_skin_dir3.setText(_translate("MainWindow", "打开Dota2SkinChanger3"))
         self.action_vpk_file.setText(_translate("MainWindow", "打开pak01_dir.vpk"))
+        self.action_config.setText(_translate("MainWindow", "打开config.json"))
