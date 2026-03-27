@@ -84,6 +84,7 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         self.action_general_lua.triggered.connect(self.general_lua)
         self.action_killed_lua.triggered.connect(self.killed_lua)
         self.action_vpk_file.triggered.connect(self.vpk_file)
+        self.action_config.triggered.connect(self.config)
 
     def load(self):
         """载入"""
@@ -393,6 +394,11 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         """打开pak01_dir.vpk"""
         open_vpk()
         self.statusbar.showMessage("打开vpk文件！")
+
+    def config(self):
+        """打开config.json"""
+        open_config()
+        self.statusbar.showMessage("打开config.json文件！")
 
     # region 工具方法
 
