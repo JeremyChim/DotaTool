@@ -1,0 +1,2 @@
+pyperclip==1.11.0
+PyQt5_sip==12.15.0
