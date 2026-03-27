@@ -78,6 +78,7 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         self.action_bot_dir.triggered.connect(self.bot_dir)
         self.action_dota_dir.triggered.connect(self.dota_dir)
         self.action_mod_dir.triggered.connect(self.mod_dir)
+        self.action_vscripts_dir.triggered.connect(self.vscripts_dir)
         self.action_skin_dir.triggered.connect(self.skin_dir)
         self.action_skin_dir2.triggered.connect(self.skin_dir2)
         self.action_skin_dir3.triggered.connect(self.skin_dir3)
@@ -364,6 +365,11 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         """打开mod文件夹"""
         open_mod_dir()
         self.statusbar.showMessage("打开mod文件夹！")
+
+    def vscripts_dir(self):
+        """打开vscripts文件夹"""
+        open_vscripts_dir()
+        self.statusbar.showMessage("打开vscripts文件夹！")
 
     def skin_dir(self):
         """打开 Dota2SkinChanger 文件夹"""

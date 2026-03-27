@@ -574,6 +574,7 @@ QListView {
     <addaction name="action_bot_dir"/>
     <addaction name="action_dota_dir"/>
     <addaction name="action_mod_dir"/>
+    <addaction name="action_vscripts_dir"/>
     <addaction name="action_skin_dir"/>
     <addaction name="action_skin_dir2"/>
     <addaction name="action_skin_dir3"/>
@@ -968,6 +969,11 @@ QListView {
   <action name="action_config">
    <property name="text">
     <string>打开config.json</string>
+   </property>
+  </action>
+  <action name="action_vscripts_dir">
+   <property name="text">
+    <string>打开vscripts文件夹</string>
    </property>
   </action>
  </widget>

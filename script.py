@@ -172,6 +172,12 @@ def open_bot_dir():
     os.startfile(bot_path)
 
 
+def open_vscripts_dir():
+    dota_path = read_config()['dota_path']
+    vscripts_dir = os.path.join(dota_path, "game", "dota", "scripts", "vscripts")
+    os.startfile(vscripts_dir)
+
+
 def open_dota_path():
     config = read_config()
     dota_path = config['dota_path']
@@ -253,4 +259,5 @@ if __name__ == '__main__':
     # clean_all_skin()
     # open_gi()
     # open_vpk()
-    open_config()
+    # open_config()
+    open_vscripts_dir()
