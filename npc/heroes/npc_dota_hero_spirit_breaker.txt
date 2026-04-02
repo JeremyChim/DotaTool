@@ -238,14 +238,12 @@
 			{
 				"value"	"0"
 				"special_bonus_scepter" "185"
-				"affected_by_aoe_increase"	"1"
 			}
 
 			"cascading_bashes_creep_hitbox"
 			{
 				"value"	"0"
-				"special_bonus_scepter" "100"
-				"affected_by_aoe_increase"	"1"
+				"special_bonus_scepter" "100"		
 			}
 
 			"knockback_distance"	
@@ -296,6 +294,7 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"FightRecapLevel"				"2"
 		"AbilitySound"					"Hero_Spirit_Breaker.NetherStrike.Begin"
+		"HasScepterUpgrade"				"1"
 
 		"AbilityDraftExtraAbilities"
 		{
