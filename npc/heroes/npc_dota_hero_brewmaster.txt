@@ -202,11 +202,6 @@
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 		"AbilityCastGestureSlot"		"DEFAULT"
 
-		"AbilityDraftExtraAbilities"
-		{
-			"brewmaster_primal_companion" "scepter"
-		}
-
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"0"
@@ -506,7 +501,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"0"
+		"AbilityCooldown"				"3"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
