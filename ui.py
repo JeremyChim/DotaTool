@@ -15,477 +15,18 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1200, 800)
-        MainWindow.setStyleSheet("/*\n"
-"Material Dark Style Sheet for QT Applications\n"
-"Author: Jaime A. Quiroga P.\n"
-"Inspired on https://github.com/jxfwinter/qt-material-stylesheet\n"
-"Company: GTRONICK\n"
-"Last updated: 04/12/2018, 15:00.\n"
-"Available at: https://github.com/GTRONICK/QSS/blob/master/MaterialDark.qss\n"
-"*/\n"
-"\n"
-"QMainWindow {\n"
-"    background-color:#1e1d23;\n"
-"}\n"
-"QDialog {\n"
-"    background-color:#1e1d23;\n"
-"}\n"
-"QColorDialog {\n"
-"    background-color:#1e1d23;\n"
-"}\n"
-"QTextEdit {\n"
-"    background-color:#1e1d23;\n"
-"    color: #a9b7c6;\n"
-"}\n"
-"QPlainTextEdit {\n"
-"    selection-background-color:#007b50;\n"
-"    background-color:#1e1d23;\n"
-"    border-style: solid;\n"
-"    border-top-color: transparent;\n"
-"    border-right-color: transparent;\n"
-"    border-left-color: transparent;\n"
-"    border-bottom-color: transparent;\n"
-"    border-width: 1px;\n"
-"    color: #a9b7c6;\n"
-"}\n"
-"QPushButton{\n"
-"    border-style: solid;\n"
-"    border-top-color: transparent;\n"
-"    border-right-color: transparent;\n"
-"    border-left-color: transparent;\n"
-"    border-bottom-color: transparent;\n"
-"    border-width: 1px;\n"
-"    border-style: solid;\n"
-"    color: #a9b7c6;\n"
-"    padding: 2px;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QPushButton::default{\n"
-"    border-style: inset;\n"
-"    border-top-color: transparent;\n"
-"    border-right-color: transparent;\n"
-"    border-left-color: transparent;\n"
-"    border-bottom-color: #04b97f;\n"
-"    border-width: 1px;\n"
-"    color: #a9b7c6;\n"
-"    padding: 2px;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QToolButton {\n"
-"    border-style: solid;\n"
-"    border-top-color: transparent;\n"
-"    border-right-color: transparent;\n"
-"    border-left-color: transparent;\n"
-"    border-bottom-color: #04b97f;\n"
-"    border-bottom-width: 1px;\n"
-"    border-style: solid;\n"
-"    color: #a9b7c6;\n"
-"    padding: 2px;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QToolButton:hover{\n"
-"    border-style: solid;\n"
-"    border-top-color: transparent;\n"
-"    border-right-color: transparent;\n"
-"    border-left-color: transparent;\n"
-"    border-bottom-color: #37efba;\n"
-"    border-bottom-width: 2px;\n"
-"    border-style: solid;\n"
-"    color: #FFFFFF;\n"
-"    padding-bottom: 1px;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    border-style: solid;\n"
-"    border-top-color: transparent;\n"
-"    border-right-color: transparent;\n"
-"    border-left-color: transparent;\n"
-"    border-bottom-color: #37efba;\n"
-"    border-bottom-width: 1px;\n"
-"    border-style: solid;\n"
-"    color: #FFFFFF;\n"
-"    padding-bottom: 2px;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QPushButton:pressed{\n"
-"    border-style: solid;\n"
-"    border-top-color: transparent;\n"
-"    border-right-color: transparent;\n"
-"    border-left-color: transparent;\n"
-"    border-bottom-color: #37efba;\n"
-"    border-bottom-width: 2px;\n"
-"    border-style: solid;\n"
-"    color: #37efba;\n"
-"    padding-bottom: 1px;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QPushButton:disabled{\n"
-"    border-style: solid;\n"
-"    border-top-color: transparent;\n"
-"    border-right-color: transparent;\n"
-"    border-left-color: transparent;\n"
-"    border-bottom-color: #808086;\n"
-"    border-bottom-width: 2px;\n"
-"    border-style: solid;\n"
-"    color: #808086;\n"
-"    padding-bottom: 1px;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QLineEdit {\n"
-"    border-width: 1px; border-radius: 4px;\n"
-"    border-color: rgb(58, 58, 58);\n"
-"    border-style: inset;\n"
-"    padding: 0 8px;\n"
-"    color: #a9b7c6;\n"
-"    background:#1e1d23;\n"
-"    selection-background-color:#007b50;\n"
-"    selection-color: #FFFFFF;\n"
-"}\n"
-"QLabel {\n"
-"    color: #a9b7c6;\n"
-"}\n"
-"QLCDNumber {\n"
-"    color: #37e6b4;\n"
-"}\n"
-"QProgressBar {\n"
-"    text-align: center;\n"
-"    color: rgb(240, 240, 240);\n"
-"    border-width: 1px; \n"
-"    border-radius: 10px;\n"
-"    border-color: rgb(58, 58, 58);\n"
-"    border-style: inset;\n"
-"    background-color:#1e1d23;\n"
-"}\n"
-"QProgressBar::chunk {\n"
-"    background-color: #04b97f;\n"
-"    border-radius: 5px;\n"
-"}\n"
-"QMenuBar {\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QMenuBar::item {\n"
-"    color: #a9b7c6;\n"
-"      spacing: 3px;\n"
-"      padding: 1px 4px;\n"
-"      background: #1e1d23;\n"
-"}\n"
-"\n"
-"QMenuBar::item:selected {\n"
-"      background:#1e1d23;\n"
-"    color: #FFFFFF;\n"
-"}\n"
-"QMenu::item:selected {\n"
-"    border-style: solid;\n"
-"    border-top-color: transparent;\n"
-"    border-right-color: transparent;\n"
-"    border-left-color: #04b97f;\n"
-"    border-bottom-color: transparent;\n"
-"    border-left-width: 2px;\n"
-"    color: #FFFFFF;\n"
-"    padding-left:15px;\n"
-"    padding-top:4px;\n"
-"    padding-bottom:4px;\n"
-"    padding-right:7px;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QMenu::item {\n"
-"    border-style: solid;\n"
-"    border-top-color: transparent;\n"
-"    border-right-color: transparent;\n"
-"    border-left-color: transparent;\n"
-"    border-bottom-color: transparent;\n"
-"    border-bottom-width: 1px;\n"
-"    border-style: solid;\n"
-"    color: #a9b7c6;\n"
-"    padding-left:17px;\n"
-"    padding-top:4px;\n"
-"    padding-bottom:4px;\n"
-"    padding-right:7px;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QMenu{\n"
-"    background-color:#1e1d23;\n"
-"}\n"
-"QTabWidget {\n"
-"    color:rgb(0,0,0);\n"
-"    background-color:#1e1d23;\n"
-"}\n"
-"QTabWidget::pane {\n"
-"        border-color: rgb(77,77,77);\n"
-"        background-color:#1e1d23;\n"
-"        border-style: solid;\n"
-"        border-width: 1px;\n"
-"        border-radius: 6px;\n"
-"}\n"
-"QTabBar::tab {\n"
-"    border-style: solid;\n"
-"    border-top-color: transparent;\n"
-"    border-right-color: transparent;\n"
-"    border-left-color: transparent;\n"
-"    border-bottom-color: transparent;\n"
-"    border-bottom-width: 1px;\n"
-"    border-style: solid;\n"
-"    color: #808086;\n"
-"    padding: 3px;\n"
-"    margin-left:3px;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QTabBar::tab:selected, QTabBar::tab:last:selected, QTabBar::tab:hover {\n"
-"      border-style: solid;\n"
-"    border-top-color: transparent;\n"
-"    border-right-color: transparent;\n"
-"    border-left-color: transparent;\n"
-"    border-bottom-color: #04b97f;\n"
-"    border-bottom-width: 2px;\n"
-"    border-style: solid;\n"
-"    color: #FFFFFF;\n"
-"    padding-left: 3px;\n"
-"    padding-bottom: 2px;\n"
-"    margin-left:3px;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"\n"
-"QCheckBox {\n"
-"    color: #a9b7c6;\n"
-"    padding: 2px;\n"
-"}\n"
-"QCheckBox:disabled {\n"
-"    color: #808086;\n"
-"    padding: 2px;\n"
-"}\n"
-"\n"
-"QCheckBox:hover {\n"
-"    border-radius:4px;\n"
-"    border-style:solid;\n"
-"    padding-left: 1px;\n"
-"    padding-right: 1px;\n"
-"    padding-bottom: 1px;\n"
-"    padding-top: 1px;\n"
-"    border-width:1px;\n"
-"    border-color: rgb(87, 97, 106);\n"
-"    background-color:#1e1d23;\n"
-"}\n"
-"QCheckBox::indicator:checked {\n"
-"\n"
-"    height: 10px;\n"
-"    width: 10px;\n"
-"    border-style:solid;\n"
-"    border-width: 1px;\n"
-"    border-color: #04b97f;\n"
-"    color: #a9b7c6;\n"
-"    background-color: #04b97f;\n"
-"}\n"
-"QCheckBox::indicator:unchecked {\n"
-"\n"
-"    height: 10px;\n"
-"    width: 10px;\n"
-"    border-style:solid;\n"
-"    border-width: 1px;\n"
-"    border-color: #04b97f;\n"
-"    color: #a9b7c6;\n"
-"    background-color: transparent;\n"
-"}\n"
-"QRadioButton {\n"
-"    color: #a9b7c6;\n"
-"    background-color: #1e1d23;\n"
-"    padding: 1px;\n"
-"}\n"
-"QRadioButton::indicator:checked {\n"
-"    height: 10px;\n"
-"    width: 10px;\n"
-"    border-style:solid;\n"
-"    border-radius:5px;\n"
-"    border-width: 1px;\n"
-"    border-color: #04b97f;\n"
-"    color: #a9b7c6;\n"
-"    background-color: #04b97f;\n"
-"}\n"
-"QRadioButton::indicator:!checked {\n"
-"    height: 10px;\n"
-"    width: 10px;\n"
-"    border-style:solid;\n"
-"    border-radius:5px;\n"
-"    border-width: 1px;\n"
-"    border-color: #04b97f;\n"
-"    color: #a9b7c6;\n"
-"    background-color: transparent;\n"
-"}\n"
-"QStatusBar {\n"
-"    color:#027f7f;\n"
-"}\n"
-"QSpinBox {\n"
-"    color: #a9b7c6;    \n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QDoubleSpinBox {\n"
-"    color: #a9b7c6;    \n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QTimeEdit {\n"
-"    color: #a9b7c6;    \n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QDateTimeEdit {\n"
-"    color: #a9b7c6;    \n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QDateEdit {\n"
-"    color: #a9b7c6;    \n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QComboBox {\n"
-"    color: #a9b7c6;    \n"
-"    background: #1e1d23;\n"
-"}\n"
-"QComboBox:editable {\n"
-"    background: #1e1d23;\n"
-"    color: #a9b7c6;\n"
-"    selection-background-color: #1e1d23;\n"
-"}\n"
-"QComboBox QAbstractItemView {\n"
-"    color: #a9b7c6;    \n"
-"    background: #1e1d23;\n"
-"    selection-color: #FFFFFF;\n"
-"    selection-background-color: #1e1d23;\n"
-"}\n"
-"QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
-"    color: #a9b7c6;    \n"
-"    background: #1e1d23;\n"
-"}\n"
-"QFontComboBox {\n"
-"    color: #a9b7c6;    \n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QToolBox {\n"
-"    color: #a9b7c6;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QToolBox::tab {\n"
-"    color: #a9b7c6;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QToolBox::tab:selected {\n"
-"    color: #FFFFFF;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QScrollArea {\n"
-"    color: #FFFFFF;\n"
-"    background-color: #1e1d23;\n"
-"}\n"
-"QSlider::groove:horizontal {\n"
-"    height: 5px;\n"
-"    background: #04b97f;\n"
-"}\n"
-"QSlider::groove:vertical {\n"
-"    width: 5px;\n"
-"    background: #04b97f;\n"
-"}\n"
-"QSlider::handle:horizontal {\n"
-"    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f);\n"
-"    border: 1px solid #5c5c5c;\n"
-"    width: 14px;\n"
-"    margin: -5px 0;\n"
-"    border-radius: 7px;\n"
-"}\n"
-"QSlider::handle:vertical {\n"
-"    background: qlineargradient(x1:1, y1:1, x2:0, y2:0, stop:0 #b4b4b4, stop:1 #8f8f8f);\n"
-"    border: 1px solid #5c5c5c;\n"
-"    height: 14px;\n"
-"    margin: 0 -5px;\n"
-"    border-radius: 7px;\n"
-"}\n"
-"QSlider::add-page:horizontal {\n"
-"    background: white;\n"
-"}\n"
-"QSlider::add-page:vertical {\n"
-"    background: white;\n"
-"}\n"
-"QSlider::sub-page:horizontal {\n"
-"    background: #04b97f;\n"
-"}\n"
-"QSlider::sub-page:vertical {\n"
-"    background: #04b97f;\n"
-"}\n"
-"\n"
-"/* 垂直滚动条整体区域 */\n"
-"QScrollBar:vertical {\n"
-"    background: #1e1d23;\n"
-"    width: 12px;\n"
-"    margin: 0px 0px 0px 0px;\n"
-"}\n"
-"\n"
-"/* 垂直滚动条滑块 */\n"
-"QScrollBar::handle:vertical {\n"
-"    background: #3a3a3a; /* 深灰色滑块 */\n"
-"    min-height: 20px;\n"
-"    border-radius: 6px;\n"
-"    margin: 2px;\n"
-"}\n"
-"\n"
-"/* 鼠标悬停在滑块上时变为主题翠绿色 */\n"
-"QScrollBar::handle:vertical:hover {\n"
-"    background: #04b97f;\n"
-"}\n"
-"\n"
-"/* 隐藏垂直滚动条顶部的箭头按钮 */\n"
-"QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
-"    height: 0px;\n"
-"}\n"
-"\n"
-"/* 水平滚动条整体区域 */\n"
-"QScrollBar:horizontal {\n"
-"    background: #1e1d23;\n"
-"    height: 12px;\n"
-"    margin: 0px 0px 0px 0px;\n"
-"}\n"
-"\n"
-"/* 水平滚动条滑块 */\n"
-"QScrollBar::handle:horizontal {\n"
-"    background: #3a3a3a;\n"
-"    min-width: 20px;\n"
-"    border-radius: 6px;\n"
-"    margin: 2px;\n"
-"}\n"
-"\n"
-"/* 鼠标悬停在滑块上 */\n"
-"QScrollBar::handle:horizontal:hover {\n"
-"    background: #04b97f;\n"
-"}\n"
-"\n"
-"/* 隐藏水平滚动条两端的箭头按钮 */\n"
-"QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {\n"
-"    width: 0px;\n"
-"}\n"
-"\n"
-"/* 滚动条背景（槽） */\n"
-"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical,\n"
-"QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {\n"
-"    background: none;\n"
-"}\n"
-"\n"
-"QListView {\n"
-"    selection-background-color:#FFFFFF;\n"
-"    background-color:#1e1d23;\n"
-"    border-style: solid;\n"
-"    border-top-color: transparent;\n"
-"    border-right-color: transparent;\n"
-"    border-left-color: transparent;\n"
-"    border-bottom-color: transparent;\n"
-"    border-width: 1px;\n"
-"    color: #FFFFFF;\n"
-"    font: 10pt \"JetBrains Mono\";\n"
-"}")
+        MainWindow.setStyleSheet("")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.listView = QtWidgets.QListView(self.centralwidget)
-        self.listView.setStyleSheet("")
+        self.listView.setStyleSheet("font: 9pt \"JetBrains Mono\";")
         self.listView.setObjectName("listView")
         self.horizontalLayout.addWidget(self.listView)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1200, 18))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1200, 24))
         self.menubar.setObjectName("menubar")
         self.menua = QtWidgets.QMenu(self.menubar)
         self.menua.setObjectName("menua")
@@ -535,24 +76,24 @@ class Ui_MainWindow(object):
         self.action_0.setObjectName("action_0")
         self.action_15 = QtWidgets.QAction(MainWindow)
         self.action_15.setObjectName("action_15")
-        self.action_50 = QtWidgets.QAction(MainWindow)
-        self.action_50.setObjectName("action_50")
-        self.action_75 = QtWidgets.QAction(MainWindow)
-        self.action_75.setObjectName("action_75")
-        self.action_25 = QtWidgets.QAction(MainWindow)
-        self.action_25.setObjectName("action_25")
-        self.action_c50 = QtWidgets.QAction(MainWindow)
-        self.action_c50.setObjectName("action_c50")
-        self.action_c25 = QtWidgets.QAction(MainWindow)
-        self.action_c25.setObjectName("action_c25")
+        self.action_5 = QtWidgets.QAction(MainWindow)
+        self.action_5.setObjectName("action_5")
+        self.action_7 = QtWidgets.QAction(MainWindow)
+        self.action_7.setObjectName("action_7")
+        self.action_2 = QtWidgets.QAction(MainWindow)
+        self.action_2.setObjectName("action_2")
+        self.action_ctrl_4 = QtWidgets.QAction(MainWindow)
+        self.action_ctrl_4.setObjectName("action_ctrl_4")
+        self.action_ctrl_2 = QtWidgets.QAction(MainWindow)
+        self.action_ctrl_2.setObjectName("action_ctrl_2")
         self.action_tab = QtWidgets.QAction(MainWindow)
         self.action_tab.setObjectName("action_tab")
         self.action_back = QtWidgets.QAction(MainWindow)
         self.action_back.setObjectName("action_back")
-        self.action_33 = QtWidgets.QAction(MainWindow)
-        self.action_33.setObjectName("action_33")
-        self.action_c33 = QtWidgets.QAction(MainWindow)
-        self.action_c33.setObjectName("action_c33")
+        self.action_3 = QtWidgets.QAction(MainWindow)
+        self.action_3.setObjectName("action_3")
+        self.action_ctrl_3 = QtWidgets.QAction(MainWindow)
+        self.action_ctrl_3.setObjectName("action_ctrl_3")
         self.action_top = QtWidgets.QAction(MainWindow)
         self.action_top.setCheckable(True)
         self.action_top.setVisible(True)
@@ -587,10 +128,10 @@ class Ui_MainWindow(object):
         self.action_killed_lua.setObjectName("action_killed_lua")
         self.action33 = QtWidgets.QAction(MainWindow)
         self.action33.setObjectName("action33")
-        self.action_100 = QtWidgets.QAction(MainWindow)
-        self.action_100.setObjectName("action_100")
-        self.action_c75 = QtWidgets.QAction(MainWindow)
-        self.action_c75.setObjectName("action_c75")
+        self.action_8 = QtWidgets.QAction(MainWindow)
+        self.action_8.setObjectName("action_8")
+        self.action_ctrl_5 = QtWidgets.QAction(MainWindow)
+        self.action_ctrl_5.setObjectName("action_ctrl_5")
         self.action_mod_dir = QtWidgets.QAction(MainWindow)
         self.action_mod_dir.setObjectName("action_mod_dir")
         self.action_skin_dir = QtWidgets.QAction(MainWindow)
@@ -605,10 +146,10 @@ class Ui_MainWindow(object):
         self.action_hero_dir.setObjectName("action_hero_dir")
         self.action_gi_open = QtWidgets.QAction(MainWindow)
         self.action_gi_open.setObjectName("action_gi_open")
-        self.action_c1 = QtWidgets.QAction(MainWindow)
-        self.action_c1.setObjectName("action_c1")
-        self.action_a1 = QtWidgets.QAction(MainWindow)
-        self.action_a1.setObjectName("action_a1")
+        self.action_sub = QtWidgets.QAction(MainWindow)
+        self.action_sub.setObjectName("action_sub")
+        self.action_add = QtWidgets.QAction(MainWindow)
+        self.action_add.setObjectName("action_add")
         self.action_ch = QtWidgets.QAction(MainWindow)
         self.action_ch.setObjectName("action_ch")
         self.action_skin_dir3 = QtWidgets.QAction(MainWindow)
@@ -619,6 +160,14 @@ class Ui_MainWindow(object):
         self.action_config.setObjectName("action_config")
         self.action_vscripts_dir = QtWidgets.QAction(MainWindow)
         self.action_vscripts_dir.setObjectName("action_vscripts_dir")
+        self.action_9 = QtWidgets.QAction(MainWindow)
+        self.action_9.setObjectName("action_9")
+        self.action_6 = QtWidgets.QAction(MainWindow)
+        self.action_6.setObjectName("action_6")
+        self.action_4 = QtWidgets.QAction(MainWindow)
+        self.action_4.setObjectName("action_4")
+        self.action_ctrl_1 = QtWidgets.QAction(MainWindow)
+        self.action_ctrl_1.setObjectName("action_ctrl_1")
         self.menua.addAction(self.action_load)
         self.menua.addAction(self.action_reload)
         self.menua.addAction(self.action_save)
@@ -637,18 +186,21 @@ class Ui_MainWindow(object):
         self.menu.addAction(self.action_sp)
         self.menu.addAction(self.action_ch)
         self.menu_2.addAction(self.action_1)
+        self.menu_2.addAction(self.action_2)
+        self.menu_2.addAction(self.action_3)
+        self.menu_2.addAction(self.action_4)
+        self.menu_2.addAction(self.action_5)
+        self.menu_2.addAction(self.action_6)
+        self.menu_2.addAction(self.action_7)
+        self.menu_2.addAction(self.action_8)
+        self.menu_2.addAction(self.action_9)
         self.menu_2.addAction(self.action_0)
-        self.menu_2.addAction(self.action_a1)
-        self.menu_2.addAction(self.action_25)
-        self.menu_2.addAction(self.action_33)
-        self.menu_2.addAction(self.action_50)
-        self.menu_2.addAction(self.action_75)
-        self.menu_2.addAction(self.action_100)
-        self.menu_2.addAction(self.action_c1)
-        self.menu_2.addAction(self.action_c25)
-        self.menu_2.addAction(self.action_c33)
-        self.menu_2.addAction(self.action_c50)
-        self.menu_2.addAction(self.action_c75)
+        self.menu_2.addAction(self.action_add)
+        self.menu_2.addAction(self.action_ctrl_1)
+        self.menu_2.addAction(self.action_ctrl_2)
+        self.menu_2.addAction(self.action_ctrl_3)
+        self.menu_2.addAction(self.action_ctrl_4)
+        self.menu_2.addAction(self.action_ctrl_5)
         self.menu_3.addAction(self.action_top)
         self.menu_4.addAction(self.action_vpk)
         self.menu_4.addSeparator()
@@ -729,23 +281,23 @@ class Ui_MainWindow(object):
         self.action_0.setShortcut(_translate("MainWindow", "0"))
         self.action_15.setText(_translate("MainWindow", "+1"))
         self.action_15.setShortcut(_translate("MainWindow", "1"))
-        self.action_50.setText(_translate("MainWindow", "+50%"))
-        self.action_50.setShortcut(_translate("MainWindow", "5"))
-        self.action_75.setText(_translate("MainWindow", "+75%"))
-        self.action_75.setShortcut(_translate("MainWindow", "7"))
-        self.action_25.setText(_translate("MainWindow", "+25%"))
-        self.action_25.setShortcut(_translate("MainWindow", "2"))
-        self.action_c50.setText(_translate("MainWindow", "-50%"))
-        self.action_c50.setShortcut(_translate("MainWindow", "Ctrl+5"))
-        self.action_c25.setText(_translate("MainWindow", "-25%"))
-        self.action_c25.setShortcut(_translate("MainWindow", "Ctrl+2"))
+        self.action_5.setText(_translate("MainWindow", "+500"))
+        self.action_5.setShortcut(_translate("MainWindow", "5"))
+        self.action_7.setText(_translate("MainWindow", "=2000"))
+        self.action_7.setShortcut(_translate("MainWindow", "7"))
+        self.action_2.setText(_translate("MainWindow", "+25"))
+        self.action_2.setShortcut(_translate("MainWindow", "2"))
+        self.action_ctrl_4.setText(_translate("MainWindow", "-5"))
+        self.action_ctrl_4.setShortcut(_translate("MainWindow", "Ctrl+4"))
+        self.action_ctrl_2.setText(_translate("MainWindow", "-2.5"))
+        self.action_ctrl_2.setShortcut(_translate("MainWindow", "Ctrl+2"))
         self.action_tab.setText(_translate("MainWindow", "缩进"))
         self.action_back.setText(_translate("MainWindow", "退格"))
         self.action_back.setShortcut(_translate("MainWindow", "Backspace"))
-        self.action_33.setText(_translate("MainWindow", "+33%"))
-        self.action_33.setShortcut(_translate("MainWindow", "3"))
-        self.action_c33.setText(_translate("MainWindow", "-33%"))
-        self.action_c33.setShortcut(_translate("MainWindow", "Ctrl+3"))
+        self.action_3.setText(_translate("MainWindow", "+250"))
+        self.action_3.setShortcut(_translate("MainWindow", "3"))
+        self.action_ctrl_3.setText(_translate("MainWindow", "-25"))
+        self.action_ctrl_3.setShortcut(_translate("MainWindow", "Ctrl+3"))
         self.action_top.setText(_translate("MainWindow", "置顶"))
         self.action_top.setShortcut(_translate("MainWindow", "Ctrl+T"))
         self.action800x600.setText(_translate("MainWindow", "1000x800"))
@@ -765,9 +317,10 @@ class Ui_MainWindow(object):
         self.action_open.setShortcut(_translate("MainWindow", "O"))
         self.action_killed_lua.setText(_translate("MainWindow", "打开OnEntityKilled.lua"))
         self.action33.setText(_translate("MainWindow", "1"))
-        self.action_100.setText(_translate("MainWindow", "+100%"))
-        self.action_c75.setText(_translate("MainWindow", "-75%"))
-        self.action_c75.setShortcut(_translate("MainWindow", "Ctrl+7"))
+        self.action_8.setText(_translate("MainWindow", "+100%"))
+        self.action_8.setShortcut(_translate("MainWindow", "8"))
+        self.action_ctrl_5.setText(_translate("MainWindow", "-50"))
+        self.action_ctrl_5.setShortcut(_translate("MainWindow", "Ctrl+5"))
         self.action_mod_dir.setText(_translate("MainWindow", "打开mod文件夹"))
         self.action_skin_dir.setText(_translate("MainWindow", "打开Dota2SkinChanger"))
         self.action_skin_dir2.setText(_translate("MainWindow", "打开Dota2SkinChanger2"))
@@ -775,13 +328,21 @@ class Ui_MainWindow(object):
         self.action_path_dir.setText(_translate("MainWindow", "打开根目录"))
         self.action_hero_dir.setText(_translate("MainWindow", "打开英雄文件夹"))
         self.action_gi_open.setText(_translate("MainWindow", "打开gi"))
-        self.action_c1.setText(_translate("MainWindow", "-1"))
-        self.action_c1.setShortcut(_translate("MainWindow", "-"))
-        self.action_a1.setText(_translate("MainWindow", "+1"))
-        self.action_a1.setShortcut(_translate("MainWindow", "+"))
+        self.action_sub.setText(_translate("MainWindow", "-1"))
+        self.action_sub.setShortcut(_translate("MainWindow", "-"))
+        self.action_add.setText(_translate("MainWindow", "+1"))
+        self.action_add.setShortcut(_translate("MainWindow", "+"))
         self.action_ch.setText(_translate("MainWindow", "充能"))
         self.action_ch.setShortcut(_translate("MainWindow", "H"))
         self.action_skin_dir3.setText(_translate("MainWindow", "打开Dota2SkinChanger3"))
         self.action_vpk_file.setText(_translate("MainWindow", "打开pak01_dir.vpk"))
         self.action_config.setText(_translate("MainWindow", "打开config.json"))
         self.action_vscripts_dir.setText(_translate("MainWindow", "打开vscripts文件夹"))
+        self.action_9.setText(_translate("MainWindow", "=99999"))
+        self.action_9.setShortcut(_translate("MainWindow", "9"))
+        self.action_6.setText(_translate("MainWindow", "=1000"))
+        self.action_6.setShortcut(_translate("MainWindow", "6"))
+        self.action_4.setText(_translate("MainWindow", "+50"))
+        self.action_4.setShortcut(_translate("MainWindow", "4"))
+        self.action_ctrl_1.setText(_translate("MainWindow", "-1"))
+        self.action_ctrl_1.setShortcut(_translate("MainWindow", "Ctrl+1"))

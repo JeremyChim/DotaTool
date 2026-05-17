@@ -3,10 +3,11 @@
     "sp": "+50%",
     "sa_cd": "-25%",
     "sp_cd": "-50%",
-    "last_path": null,
-    "dota_path": "D:\\APP\\Steam\\steamapps\\common\\dota 2 beta",
-    "bot_path": "D:\\APP\\Steam\\steamapps\\workshop\\content\\570\\3246316298",
-    "bot_cmd": "sv_cheats 1; script_reload_code bots/fretbots",
+    "last_path": "C:\\Users\\Jeremy\\Desktop\\DotaTool-master\\vpk\\pak01_dir\\scripts\\npc\\heroes\\npc_dota_hero_void_spirit.txt",
+    "dota_path": "E:\\GAME\\steamapps\\common\\dota 2 beta",
+    "bot_path": "E:\\GAME\\steamapps\\workshop\\content\\570\\3246316298",
+    "bot_cmd": "sv_cheats 1; script_reload_code bots/Buff/buff",
+    "bot_cm2": "sv_cheats 1; script_reload_code bots/fretbots",
     "steam_cmd": "+con_enable 1 -noforcemaccel -noforcemspd -useforcedmparms -windowed -noborder -high -map dota -nod3d9ex -nohltv -novr -nojoy -novid",
     "xp": "*2",
     "gold": "*2",
@@ -22,7 +23,119 @@
         [
             "item_aghanims_shard",
             "ItemInitialStockTime",
-            "540.0"
+            "0.0"
+        ]
+    ],
+    "towers": [
+        [
+            "npc_dota_goodguys_tower3_top",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_goodguys_tower3_mid",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_goodguys_tower3_bot",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_badguys_tower3_top",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_badguys_tower3_mid",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_badguys_tower3_bot",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_goodguys_melee_rax_top",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_goodguys_melee_rax_mid",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_goodguys_melee_rax_bot",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_goodguys_range_rax_top",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_goodguys_range_rax_mid",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_goodguys_range_rax_bot",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_badguys_melee_rax_top",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_badguys_melee_rax_mid",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_badguys_melee_rax_bot",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_badguys_range_rax_top",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_badguys_range_rax_mid",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_badguys_range_rax_bot",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_goodguys_tower4",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_badguys_tower4",
+            "StatusHealthRegen",
+            "200"
+        ],
+        [
+            "npc_dota_goodguys_fort",
+            "StatusHealthRegen",
+            "300"
+        ],
+        [
+            "npc_dota_badguys_fort",
+            "StatusHealthRegen",
+            "300"
         ]
     ]
 }

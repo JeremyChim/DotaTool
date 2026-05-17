@@ -92,8 +92,33 @@ def update_xp_gold():
             lines2.append(line2)
         else:
             lines2.append(line)
-    write_file(units_path2, lines2)
+    lines3 = update_tower(lines2)
+    write_file(units_path2, lines3)
 
+
+def update_tower(lines):
+    """更新塔"""
+    config = read_config()
+    towers = config["towers"]
+    # lines = read_file(units_path)
+    lines2 = lines[:]
+    for tower in towers:
+        name, attr, new_val = tower
+        line2 = 'n/a \n'
+        i = 0
+        for i, line in enumerate(lines):
+            if f'"{name}"' in line:
+                print(i + 1, line, end='')
+                break
+        for i, line in enumerate(lines[i:], i):
+            if f'"{attr}"' in line:
+                val = line.split('"')[3]
+                line2 = line.replace(val, new_val)
+                print(i + 1, line2, end='')
+                break
+        lines2[i] = line2
+    # write_file(units_path2, lines2)
+    return lines2
 
 def update_neutral_items():
     """更新中立物品时间"""
@@ -247,7 +272,8 @@ def open_config():
 if __name__ == '__main__':
     # copy_steam_cmd()
     # update_gi()
-    # update_xp_gold()
+    update_xp_gold()
+    # update_tower()
     # update_neutral_items()
     # update_items()
     # generate_vpk()
@@ -260,4 +286,4 @@ if __name__ == '__main__':
     # open_gi()
     # open_vpk()
     # open_config()
-    open_vscripts_dir()
+    # open_vscripts_dir()

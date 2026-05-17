@@ -45,19 +45,22 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         self.action_ch.triggered.connect(self.ch)
 
         # 预设
-        self.action_1.triggered.connect(self.fun_1)
-        self.action_0.triggered.connect(self.fun_0)
-        self.action_a1.triggered.connect(self.fun_a1)
-        self.action_25.triggered.connect(self.fun_25)
-        self.action_33.triggered.connect(self.fun_33)
-        self.action_50.triggered.connect(self.fun_50)
-        self.action_75.triggered.connect(self.fun_75)
-        self.action_100.triggered.connect(self.fun_100)
-        self.action_c1.triggered.connect(self.fun_c1)
-        self.action_c25.triggered.connect(self.fun_c25)
-        self.action_c33.triggered.connect(self.fun_c33)
-        self.action_c50.triggered.connect(self.fun_c50)
-        self.action_c75.triggered.connect(self.fun_c75)
+        self.action_1.triggered.connect(lambda: self._fun("=1"))
+        self.action_2.triggered.connect(lambda: self._fun("+25", "+50"))
+        self.action_3.triggered.connect(lambda: self._fun("+250", "+500"))
+        self.action_4.triggered.connect(lambda: self._fun("+50", "+100"))
+        self.action_5.triggered.connect(lambda: self._fun("+500", "+1000"))
+        self.action_6.triggered.connect(lambda: self._fun("=1000"))
+        self.action_7.triggered.connect(lambda: self._fun("=2000"))
+        self.action_8.triggered.connect(lambda: self._fun("+100%"))
+        self.action_9.triggered.connect(lambda: self._fun("=999999"))
+        self.action_0.triggered.connect(lambda: self._fun("=0"))
+        self.action_add.triggered.connect(lambda: self._fun("+1"))
+        self.action_ctrl_1.triggered.connect(lambda: self._fun("-1"))
+        self.action_ctrl_2.triggered.connect(lambda: self._fun("-2.5","-5.0"))
+        self.action_ctrl_3.triggered.connect(lambda: self._fun("-25","-50"))
+        self.action_ctrl_4.triggered.connect(lambda: self._fun("-5","-10"))
+        self.action_ctrl_5.triggered.connect(lambda: self._fun("-50","-100"))
 
         # 窗口
         self.action_top.triggered.connect(self.top)
@@ -254,14 +257,14 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
     def fun_0(self):
         self._fun("=0")
 
-    def fun_a1(self):
+    def fun_add1(self):
         self._fun("+1")
 
     def fun_25(self):
-        self._fun("+25%")
+        self._fun("+25", "+50")
 
     def fun_33(self):
-        self._fun("+33%")
+        self._fun("+250", "+500")
 
     def fun_50(self):
         self._fun("+50%")
@@ -271,6 +274,9 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
 
     def fun_100(self):
         self._fun("+100%")
+
+    def fun_99999(self):
+        self._fun("=99999")
 
     def fun_c1(self):
         self._fun("-1")
@@ -486,13 +492,14 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
                 ls2.append(l)
         return '\n'.join(ls2)
 
-    def _fun(self, a):
+    def _fun(self, a, b=None):
         try:
+            if b is None: b = a
             line = self._read_line()
             if "value" in line:
-                line2 = self._update_ab1(line, a, a)
+                line2 = self._update_ab1(line, a, b)
             else:
-                line2 = self._update_ab2(line, a, a)
+                line2 = self._update_ab2(line, a, b)
             self._write_line(line2)
             self.undo_board.append(line)
         except  Exception as e:
