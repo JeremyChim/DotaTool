@@ -20,6 +20,12 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
 
     def init(self):
         """初始化"""
+
+        # 尺寸位置
+        self.resize(1660, 880)
+        self.move(160, 90)
+
+        # 快捷键
         self.action_tab.setShortcut("tab")
 
         # 文件
@@ -57,10 +63,10 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         self.action_0.triggered.connect(lambda: self._fun("=0"))
         self.action_add.triggered.connect(lambda: self._fun("+1"))
         self.action_ctrl_1.triggered.connect(lambda: self._fun("-1"))
-        self.action_ctrl_2.triggered.connect(lambda: self._fun("-2.5","-5.0"))
-        self.action_ctrl_3.triggered.connect(lambda: self._fun("-25","-50"))
-        self.action_ctrl_4.triggered.connect(lambda: self._fun("-5","-10"))
-        self.action_ctrl_5.triggered.connect(lambda: self._fun("-50","-100"))
+        self.action_ctrl_2.triggered.connect(lambda: self._fun("-2.5", "-5.0"))
+        self.action_ctrl_3.triggered.connect(lambda: self._fun("-25", "-50"))
+        self.action_ctrl_4.triggered.connect(lambda: self._fun("-5", "-10"))
+        self.action_ctrl_5.triggered.connect(lambda: self._fun("-50", "-100"))
 
         # 窗口
         self.action_top.triggered.connect(self.top)
