@@ -16,14 +16,20 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         self.cut_board = []
         self.undo_board = []
         self.init()
-        self._first_load()
 
     def init(self):
         """初始化"""
 
+        # 加载
+        self.show_list()
+        self._first_load()
+
         # 尺寸位置
         self.resize(1660, 880)
         self.move(160, 90)
+
+        # 绑定
+        self.listWidget.itemClicked.connect(self.open_file_form_list)
 
         # 快捷键
         self.action_tab.setShortcut("tab")
@@ -95,6 +101,22 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         self.action_killed_lua.triggered.connect(self.killed_lua)
         self.action_vpk_file.triggered.connect(self.vpk_file)
         self.action_config.triggered.connect(self.config)
+
+    def show_list(self):
+        dir_path = os.path.join(path, 'npc', 'heroes')
+        if os.path.exists(dir_path):
+            self.listWidget.clear()
+            self.listWidget.addItems(os.listdir(dir_path))
+
+    def open_file_form_list(self):
+        file = self.listWidget.currentItem().text()
+        file_path = os.path.join(path, 'npc', 'heroes', file)
+        if os.path.exists(file_path):
+            lines = read_file(file_path)
+            self.listView.setModel(QStringListModel(lines))
+            self.file_path = file_path
+            self.setWindowTitle(self.file_path)
+            self.statusbar.showMessage(f"载入：{file_path}")
 
     def load(self):
         """载入"""
