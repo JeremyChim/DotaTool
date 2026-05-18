@@ -1,3 +1,6 @@
+import os.path
+
+from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
 from PyQt5.QtCore import QStringListModel, Qt
 from ui import Ui_MainWindow
@@ -106,7 +109,14 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         dir_path = os.path.join(path, 'npc', 'heroes')
         if os.path.exists(dir_path):
             self.listWidget.clear()
-            self.listWidget.addItems(os.listdir(dir_path))
+
+            heroes = os.listdir(dir_path)
+            heroes_vpk = os.listdir(heroes_path)
+            self.listWidget.addItems(heroes)
+            for i, hero in enumerate(heroes):
+                if hero in heroes_vpk:
+                    item = self.listWidget.item(i)
+                    item.setForeground(QColor('#FF00FF'))
 
     def open_file_form_list(self):
         file = self.listWidget.currentItem().text()
@@ -146,6 +156,7 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
             write_file(save_path, self.listView.model().stringList())
             self.file_path = save_path
             self.setWindowTitle(self.file_path)
+            self.show_list()
             self.statusbar.showMessage(f"保存：{save_path}")
         else:
             self.statusbar.showMessage("没文件！")
@@ -158,6 +169,7 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
             write_file(file_path, self.listView.model().stringList())
             self.file_path = file_path
             self.setWindowTitle(self.file_path)
+            self.show_list()
             self.statusbar.showMessage(f"另存为：{file_path}")
 
     def cut(self):
