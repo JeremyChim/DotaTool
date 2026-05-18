@@ -251,48 +251,6 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         except  Exception as e:
             self.statusbar.showMessage(str(e))
 
-    def fun_1(self):
-        self._fun("=1")
-
-    def fun_0(self):
-        self._fun("=0")
-
-    def fun_add1(self):
-        self._fun("+1")
-
-    def fun_25(self):
-        self._fun("+25", "+50")
-
-    def fun_33(self):
-        self._fun("+250", "+500")
-
-    def fun_50(self):
-        self._fun("+50%")
-
-    def fun_75(self):
-        self._fun("+75%")
-
-    def fun_100(self):
-        self._fun("+100%")
-
-    def fun_99999(self):
-        self._fun("=99999")
-
-    def fun_c1(self):
-        self._fun("-1")
-
-    def fun_c25(self):
-        self._fun("-25%")
-
-    def fun_c33(self):
-        self._fun("-33%")
-
-    def fun_c50(self):
-        self._fun("-50%")
-
-    def fun_c75(self):
-        self._fun("-75%")
-
     def top(self):
         """置顶"""
         if self.action_top.isChecked():
