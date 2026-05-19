@@ -33,7 +33,7 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
 
         # 绑定
         self.listWidget.itemClicked.connect(self.open_file_form_list)
-        self.lineEdit.textChanged.connect(self.search)
+        self.lineEdit.textChanged.connect(self.show_list)
 
         # 快捷键
         self.action_tab.setShortcut("tab")
@@ -106,26 +106,21 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         self.action_vpk_file.triggered.connect(self.vpk_file)
         self.action_config.triggered.connect(self.config)
 
-    def search(self):
+    def show_list(self):
         text = self.lineEdit.text()
         dir_path = os.path.join(path, 'npc', 'heroes')
         heroes = os.listdir(dir_path)
         self.listWidget.clear()
+        ls = []
         for hero in heroes:
             if text in hero:
                 self.listWidget.addItem(hero)
-
-    def show_list(self):
-        dir_path = os.path.join(path, 'npc', 'heroes')
-        if os.path.exists(dir_path):
-            self.listWidget.clear()
-            heroes = os.listdir(dir_path)
-            heroes_vpk = os.listdir(heroes_path)
-            self.listWidget.addItems(heroes)
-            for i, hero in enumerate(heroes):
-                if hero in heroes_vpk:
-                    item = self.listWidget.item(i)
-                    item.setForeground(QColor('#FF00FF'))
+                ls.append(hero)
+        heroes_vpk = os.listdir(heroes_path)
+        for i, hero in enumerate(ls):
+            if hero in heroes_vpk:
+                item = self.listWidget.item(i)
+                item.setForeground(QColor('#FF00FF'))
 
     def open_file_form_list(self):
         file = self.listWidget.currentItem().text()
