@@ -36,8 +36,8 @@
 			"AbilityCastPoint"
 			{
 				"value"		"0.25"
-				"special_bonus_shard"		"=0"
-				"special_bonus_scepter"		"=0"
+				"special_bonus_shard"		"-25%"
+				"special_bonus_scepter"		"-50%"
 			}
 			"AbilityManaCost"
 			{
@@ -48,8 +48,8 @@
 			"speed"
 			{
 				"value"		"1250"
-				"special_bonus_shard"		"+500"
-				"special_bonus_scepter"		"+1000"
+				"special_bonus_shard"		"+25%"
+				"special_bonus_scepter"		"+50%"
 			}
 			"width"					
 			{
@@ -58,7 +58,7 @@
 				"special_bonus_scepter"		"+50%"
 				"affected_by_aoe_increase"	"1"
 			}
-  			"AbilityCastRange"
+			"AbilityCastRange"
 			{
 				"value"		"700 775 850 925"
 				"special_bonus_shard"		"+500"
@@ -67,23 +67,23 @@
 			}			
 			"AbilityCharges"		
 			{
-				"value"						"1"
-				"special_bonus_shard"		"+1"
-				"special_bonus_scepter"		"+1"
+			    "value"						"1"
+			    "special_bonus_shard"		"+1"
+			    "special_bonus_scepter"		"+1"
 			}
 			"AbilityChargeRestoreTime"
 			{
-				"value"		"21 18 15 12"
-				"special_bonus_shard"		"-25%"
-				"special_bonus_scepter"		"-50%"
-				"special_bonus_unique_morphling_waveform_cooldown"			"-40%"
+			    "value"		"21 18 15 12"
+			    "special_bonus_shard"		"-25%"
+			    "special_bonus_scepter"		"-50%"
+			    "special_bonus_unique_morphling_waveform_cooldown"			"-40%"
 			}
 			"AbilityCooldown"		
 			{
-				"value"		"0"
-				"special_bonus_shard"		"-25%"
-				"special_bonus_scepter"		"-50%"
-				"special_bonus_unique_morphling_waveform_cooldown"			"-40%"
+			    "value"		"0"
+			    "special_bonus_shard"		"-25%"
+			    "special_bonus_scepter"		"-50%"
+			    "special_bonus_unique_morphling_waveform_cooldown"			"-40%"
 			}
 			"process_procs"
 			{
@@ -137,8 +137,8 @@
 			"AbilityCastPoint"
 			{
 				"value"		"0.25"
-				"special_bonus_shard"		"=0"
-				"special_bonus_scepter"		"=0"
+				"special_bonus_shard"		"-25%"
+				"special_bonus_scepter"		"-50%"
 			}
 			"AbilityManaCost"
 			{
@@ -202,8 +202,8 @@
 			"projectile_speed"
 			{
 				"value"		"1150"
-				"special_bonus_shard"		"+500"
-				"special_bonus_scepter"		"+1000"
+				"special_bonus_shard"		"+25%"
+				"special_bonus_scepter"		"+50%"
 			}
 			"extra_targets"
 			{
@@ -386,8 +386,8 @@
 		"AbilitySound"					"Hero_Morphling.Replicate"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 
-        "HasScepterUpgrade"			"1"
-
+	        "HasScepterUpgrade"			"1"
+	
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
  		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
@@ -411,8 +411,8 @@
 			"AbilityCastPoint"
 			{
 				"value"		"0.25"
-				"special_bonus_shard"		"=0"
-				"special_bonus_scepter"		"=0"
+				"special_bonus_shard"		"-25%"
+				"special_bonus_scepter"		"-50%"
 			}
 			"AbilityCooldown"
 			{
@@ -443,7 +443,7 @@
 			}
 			"scepter_attack_speed"	
 			{
-				"special_bonus_scepter"		"+100"
+				"special_bonus_scepter"		"100"
 				"special_bonus_shard"		"+100"
 			}
 			"scepter_status_resist"	
@@ -456,7 +456,7 @@
 			}
 			"scepter_illusion_outgoing"
 			{
-				"special_bonus_scepter"		"+100"
+				"special_bonus_scepter"		"100"
 				"special_bonus_shard"		"+100"
 			}
 			"scepter_illusion_incoming"
