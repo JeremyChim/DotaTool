@@ -14,7 +14,6 @@ function Attributes.UpdateAttr(bot, attr)
     bot:ModifyStrength(attr)
     bot:ModifyAgility(attr)
     bot:ModifyIntellect(attr)
-    bot.__buff_attr_last_minute = minute
 end
 
 return Attributes
