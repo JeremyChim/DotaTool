@@ -514,7 +514,7 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
             self._write_line(line2)
             self.undo_board.append(line)
         except  Exception as e:
-            self.statusbar.showMessage(str(e))
+            self.statusbar.showMessage(f'错误：{str(e)}')
 
     def _ch(self, line):
         mod = '''
@@ -540,6 +540,7 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
 }
 '''
         return line + mod
+
     # endregion
 
 
