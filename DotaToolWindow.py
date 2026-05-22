@@ -66,7 +66,7 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         self.action_3.triggered.connect(lambda: self._fun("+25", "+50"))
         self.action_4.triggered.connect(lambda: self._fun("+250", "+500"))
         self.action_5.triggered.connect(lambda: self._fun("+50", "+100"))
-        self.action_6.triggered.connect(lambda: self._fun("+500","+1000"))
+        self.action_6.triggered.connect(lambda: self._fun("+500", "+1000"))
         self.action_7.triggered.connect(lambda: self._fun("+50%"))
         self.action_8.triggered.connect(lambda: self._fun("+100%"))
         self.action_9.triggered.connect(lambda: self._fun("=999999"))
@@ -140,7 +140,6 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
             self.setWindowTitle(self.file_path)
             self.statusbar.showMessage(f"载入：{file_path}")
             return
-
 
     def load(self):
         """载入"""
