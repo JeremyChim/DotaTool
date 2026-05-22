@@ -28,7 +28,6 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"115"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -40,30 +39,58 @@
 				"special_bonus_shard"		"=0"
 				"special_bonus_scepter"		"=0"
 			}
-				"speed"					"1250"
+			"AbilityManaCost"
+			{
+				"value"		"115"
+				"special_bonus_shard"		"-25%"
+				"special_bonus_scepter"		"-50%"
+			}
+			"speed"
+			{
+				"value"		"1250"
+				"special_bonus_shard"		"+500"
+				"special_bonus_scepter"		"+1000"
+			}
 			"width"					
 			{
-				"value"				"200"
+				"value"		"200"
+				"special_bonus_shard"		"+25%"
+				"special_bonus_scepter"		"+50%"
 				"affected_by_aoe_increase"	"1"
 			}
-			"AbilityCharges"		
+  			"AbilityCastRange"
 			{
-				"value"	"0"
-			}
-			"AbilityCastRange"
-			{
-				"value"				"700 775 850 925"
+				"value"		"700 775 850 925"
+				"special_bonus_shard"		"+500"
+				"special_bonus_scepter"		"+1000"
 				"special_bonus_unique_morphling_1"	"+250"
 			}			
-			"AbilityCooldown"
+			"AbilityCharges"		
 			{
-				"value"														"21 18 15 12"
+				"value"						"1"
+				"special_bonus_shard"		"+1"
+				"special_bonus_scepter"		"+1"
+			}
+			"AbilityChargeRestoreTime"
+			{
+				"value"		"21 18 15 12"
+				"special_bonus_shard"		"-25%"
+				"special_bonus_scepter"		"-50%"
+				"special_bonus_unique_morphling_waveform_cooldown"			"-40%"
+			}
+			"AbilityCooldown"		
+			{
+				"value"		"0"
+				"special_bonus_shard"		"-25%"
+				"special_bonus_scepter"		"-50%"
 				"special_bonus_unique_morphling_waveform_cooldown"			"-40%"
 			}
 			"process_procs"
 			{
-				"value" "0"
-				"special_bonus_unique_morphling_4"			"+1"
+				"value"		"0"
+				"special_bonus_shard"		"=1"
+				"special_bonus_scepter"		"=1"
+				"special_bonus_unique_morphling_4"			"=1"
 			}
 		}
 	}
@@ -86,15 +113,12 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"600 675 750 825"
-		"AbilityCastPoint"				"0.25"
  		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"40 50 60 70"		
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -104,52 +128,89 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				
-				"AbilityCooldown"
-				{
-					"value"								"17 14 11 8"
-					"special_bonus_unique_morphling_7"	"-3"
-				}
-				"damage_base"								
-				{
-					"value"								"50 70 90 110"
-					"CalculateSpellDamageTooltip"		"1"
-				}
-				"damage_min"					
-				{
-					"value"								"0.5"
-					"CalculateSpellDamageTooltip"		"0"
-				}
-				"damage_max"					
-				{
-					"value"								"1.0 1.5 2.0 2.5"
-					"CalculateSpellDamageTooltip"		"0"
-				}
-				"stun_min"						
-				{
-					"value"								"0.5"
-				}
-				"stun_max"						
-				{
-					"value"								"1.4 1.8 2.2 2.6"
-				}
-				"knockback_min"					
-				{
-					"value"								"50"
-				}
-				"knockback_max"					
-				{
-					"value"								"350"
-				}
-				"knockback_duration"
-				{
-					"value"								"0.5"
-				}
-				"projectile_speed"						"1150"
-				"extra_targets"
-				{
-					"value"								"0"					
-				}
+			"AbilityCastRange"
+			{
+				"value"		"600 675 750 825"
+				"special_bonus_shard"		"+500"
+				"special_bonus_scepter"		"+1000"
+			}
+			"AbilityCastPoint"
+			{
+				"value"		"0.25"
+				"special_bonus_shard"		"=0"
+				"special_bonus_scepter"		"=0"
+			}
+			"AbilityManaCost"
+			{
+				"value"		"40 50 60 70"
+				"special_bonus_shard"		"-25%"
+				"special_bonus_scepter"		"-50%"
+			}
+					
+			"AbilityCooldown"
+			{
+				"value"		"17 14 11 8"
+				"special_bonus_shard"		"-25%"
+				"special_bonus_scepter"		"-50%"
+				"special_bonus_unique_morphling_7"	"-3"
+			}
+			"damage_base"								
+			{
+				"value"		"50 70 90 110"
+				"special_bonus_shard"		"+250"
+				"special_bonus_scepter"		"+500"
+				"CalculateSpellDamageTooltip"		"1"
+			}
+			"damage_min"					
+			{
+				"value"		"0.5"
+				"special_bonus_shard"		"+2.5"
+				"special_bonus_scepter"		"+5.0"
+				"CalculateSpellDamageTooltip"		"0"
+			}
+			"damage_max"					
+			{
+				"value"		"1.0 1.5 2.0 2.5"
+				"special_bonus_shard"		"+2.5"
+				"special_bonus_scepter"		"+5.0"
+				"CalculateSpellDamageTooltip"		"0"
+			}
+			"stun_min"						
+			{
+				"value"		"0.5"
+				"special_bonus_shard"		"+2.5"
+				"special_bonus_scepter"		"+2.5"
+			}
+			"stun_max"						
+			{
+				"value"		"1.4 1.8 2.2 2.6"
+				"special_bonus_shard"		"+2.5"
+				"special_bonus_scepter"		"+2.5"
+			}
+			"knockback_min"					
+			{
+				"value"								"50"
+			}
+			"knockback_max"					
+			{
+				"value"								"350"
+			}
+			"knockback_duration"
+			{
+				"value"								"0.5"
+			}
+			"projectile_speed"
+			{
+				"value"		"1150"
+				"special_bonus_shard"		"+500"
+				"special_bonus_scepter"		"+1000"
+			}
+			"extra_targets"
+			{
+				"value"		"0"
+				"special_bonus_shard"		"+1"
+				"special_bonus_scepter"		"+1"
+			}
 		}
 	}
 
@@ -176,17 +237,21 @@
 			"points_per_tick"		"1"
 			"morph_rate"
 			{
-				"value"				"4 8 12 16"
+				"value"		"4 8 12 16"
+				"special_bonus_shard"		"+100%"
+				"special_bonus_scepter"		"+100%"
 			}
 			"mana_cost"				
 			{
-				"value"						"10"
-				"special_bonus_shard"		"-50%"
+				"value"		"10"
+				"special_bonus_shard"		"=0"
+				"special_bonus_scepter"		"=0"
 			}
 			"castable_while_stunned"
 			{
-				"value"	"0"
-				"special_bonus_shard"	"+1"
+				"value"		"0"
+				"special_bonus_shard"		"=1"
+				"special_bonus_scepter"		"=1"
 			}
 		}
 	}
@@ -213,17 +278,21 @@
 			"points_per_tick"		"1"
 			"morph_rate"
 			{
-				"value"				"4 8 12 16"
+				"value"		"4 8 12 16"
+				"special_bonus_shard"		"+100%"
+				"special_bonus_scepter"		"+100%"
 			}
 			"mana_cost"				
 			{
-				"value"						"10"
-				"special_bonus_shard"		"-50%"
+				"value"		"10"
+				"special_bonus_shard"		"=0"
+				"special_bonus_scepter"		"=0"
 			}
 			"castable_while_stunned"
 			{
-				"value"	"0"
-				"special_bonus_shard"	"+1"
+				"value"		"0"
+				"special_bonus_shard"		"=1"
+				"special_bonus_scepter"		"=1"
 			}
 		}
 	}
@@ -321,28 +390,50 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"700 850 1000"
-		"AbilityCastPoint"				"0.25"
  		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"140 100 60"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50"		
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
+			"AbilityCastRange"
+			{
+				"value"		"700 850 1000"
+				"special_bonus_shard"		"=999999"
+				"special_bonus_scepter"		"=999999"
+			}
+			"AbilityCastPoint"
+			{
+				"value"		"0.25"
+				"special_bonus_shard"		"=0"
+				"special_bonus_scepter"		"=0"
+			}
+			"AbilityCooldown"
+			{
+				"value"		"140 100 60"
+				"special_bonus_shard"		"-25%"
+				"special_bonus_scepter"		"-50%"
+			}
+			"AbilityManaCost"
+			{
+				"value"		"50"
+				"special_bonus_shard"		"-25%"
+				"special_bonus_scepter"		"-50%"
+			}
 			"duration"
 			{
-				"value"								"24"
+				"value"		"24"
+				"special_bonus_shard"		"+25%"
+				"special_bonus_scepter"		"+50%"
 				"special_bonus_unique_morphling_8" "+12"
 			}
-            "scepter_stat_steal"
+		            "scepter_stat_steal"
 			{
 				"special_bonus_scepter"						"20"
 			}
@@ -352,7 +443,8 @@
 			}
 			"scepter_attack_speed"	
 			{
-				"special_bonus_scepter"						"70"
+				"special_bonus_scepter"		"+100"
+				"special_bonus_shard"		"+100"
 			}
 			"scepter_status_resist"	
 			{
@@ -364,7 +456,8 @@
 			}
 			"scepter_illusion_outgoing"
 			{
-				"special_bonus_scepter"						"100"
+				"special_bonus_scepter"		"+100"
+				"special_bonus_shard"		"+100"
 			}
 			"scepter_illusion_incoming"
 			{
