@@ -539,7 +539,9 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
     "special_bonus_unique_morphling_waveform_cooldown"			"-40%"
 }
 '''
-        return line + mod
+        mod = self._tab_up(mod)
+        mod = self._tab_up(mod)
+        return mod + line
 
     # endregion
 
