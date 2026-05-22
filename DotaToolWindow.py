@@ -62,12 +62,12 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
 
         # 预设
         self.action_1.triggered.connect(lambda: self._fun("=1"))
-        self.action_2.triggered.connect(lambda: self._fun("+25", "+50"))
-        self.action_3.triggered.connect(lambda: self._fun("+250", "+500"))
-        self.action_4.triggered.connect(lambda: self._fun("+50", "+100"))
-        self.action_5.triggered.connect(lambda: self._fun("+500", "+1000"))
-        self.action_6.triggered.connect(lambda: self._fun("=1000"))
-        self.action_7.triggered.connect(lambda: self._fun("=2000"))
+        self.action_2.triggered.connect(lambda: self._fun("+2.5", "+5.0"))
+        self.action_3.triggered.connect(lambda: self._fun("+25", "+50"))
+        self.action_4.triggered.connect(lambda: self._fun("+250", "+500"))
+        self.action_5.triggered.connect(lambda: self._fun("+50", "+100"))
+        self.action_6.triggered.connect(lambda: self._fun("+500","+1000"))
+        self.action_7.triggered.connect(lambda: self._fun("+50%"))
         self.action_8.triggered.connect(lambda: self._fun("+100%"))
         self.action_9.triggered.connect(lambda: self._fun("=999999"))
         self.action_0.triggered.connect(lambda: self._fun("=0"))
@@ -75,8 +75,8 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         self.action_ctrl_1.triggered.connect(lambda: self._fun("-1"))
         self.action_ctrl_2.triggered.connect(lambda: self._fun("-2.5", "-5.0"))
         self.action_ctrl_3.triggered.connect(lambda: self._fun("-25", "-50"))
-        self.action_ctrl_4.triggered.connect(lambda: self._fun("-5", "-10"))
-        self.action_ctrl_5.triggered.connect(lambda: self._fun("-50", "-100"))
+        self.action_ctrl_4.triggered.connect(lambda: self._fun("-25%"))
+        self.action_ctrl_5.triggered.connect(lambda: self._fun("-50%"))
 
         # 窗口
         self.action_top.triggered.connect(self.top)
@@ -124,6 +124,14 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
 
     def open_file_form_list(self):
         file = self.listWidget.currentItem().text()
+        file_path = os.path.join(heroes_path, file)
+        if os.path.exists(file_path):
+            lines = read_file(file_path)
+            self.listView.setModel(QStringListModel(lines))
+            self.file_path = file_path
+            self.setWindowTitle(self.file_path)
+            self.statusbar.showMessage(f"载入：{file_path}")
+            return
         file_path = os.path.join(path, 'npc', 'heroes', file)
         if os.path.exists(file_path):
             lines = read_file(file_path)
@@ -131,6 +139,8 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
             self.file_path = file_path
             self.setWindowTitle(self.file_path)
             self.statusbar.showMessage(f"载入：{file_path}")
+            return
+
 
     def load(self):
         """载入"""
@@ -229,7 +239,7 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
             sp_cd = read_config()["sp_cd"]
             line = self._read_line()
 
-            if "value" in line:
+            if "value" in line or "special_bonus_unique" in line:
                 line2 = self._update_ab1(line, sa, sp)
             elif "Point" in line or "Cooldown" in line or "ManaCost" in line or "RestoreTime" in line:
                 line2 = self._update_ab2(line, sa_cd, sp_cd)
@@ -498,7 +508,7 @@ class DotaToolWindow(QMainWindow, Ui_MainWindow):
         try:
             if b is None: b = a
             line = self._read_line()
-            if "value" in line:
+            if "value" in line or "special_bonus_unique" in line:
                 line2 = self._update_ab1(line, a, b)
             else:
                 line2 = self._update_ab2(line, a, b)

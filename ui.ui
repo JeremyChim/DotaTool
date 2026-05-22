@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>950</width>
-    <height>689</height>
+    <width>891</width>
+    <height>509</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -84,7 +84,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>950</width>
+     <width>891</width>
      <height>22</height>
     </rect>
    </property>
@@ -318,7 +318,7 @@
   </action>
   <action name="action_5">
    <property name="text">
-    <string>+500</string>
+    <string>+50/100</string>
    </property>
    <property name="shortcut">
     <string>5</string>
@@ -326,7 +326,7 @@
   </action>
   <action name="action_7">
    <property name="text">
-    <string>=2000</string>
+    <string>+50%</string>
    </property>
    <property name="shortcut">
     <string>7</string>
@@ -334,7 +334,7 @@
   </action>
   <action name="action_2">
    <property name="text">
-    <string>+25</string>
+    <string>+2.5/5.0</string>
    </property>
    <property name="shortcut">
     <string>2</string>
@@ -342,7 +342,7 @@
   </action>
   <action name="action_ctrl_4">
    <property name="text">
-    <string>-5</string>
+    <string>-25%</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+4</string>
@@ -350,7 +350,7 @@
   </action>
   <action name="action_ctrl_2">
    <property name="text">
-    <string>-2.5</string>
+    <string>-2.5/5.0</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+2</string>
@@ -371,7 +371,7 @@
   </action>
   <action name="action_3">
    <property name="text">
-    <string>+250</string>
+    <string>+25/50</string>
    </property>
    <property name="shortcut">
     <string>3</string>
@@ -379,7 +379,7 @@
   </action>
   <action name="action_ctrl_3">
    <property name="text">
-    <string>-25</string>
+    <string>-25/50</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+3</string>
@@ -490,7 +490,7 @@
   </action>
   <action name="action_ctrl_5">
    <property name="text">
-    <string>-50</string>
+    <string>-50%</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+5</string>
@@ -585,7 +585,7 @@
   </action>
   <action name="action_6">
    <property name="text">
-    <string>=1000</string>
+    <string>+500/1000</string>
    </property>
    <property name="shortcut">
     <string>6</string>
@@ -593,7 +593,7 @@
   </action>
   <action name="action_4">
    <property name="text">
-    <string>+50</string>
+    <string>+250/500</string>
    </property>
    <property name="shortcut">
     <string>4</string>

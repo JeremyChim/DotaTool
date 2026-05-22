@@ -3,7 +3,7 @@
     "sp": "+50%",
     "sa_cd": "-25%",
     "sp_cd": "-50%",
-    "last_path": "D:\\GithubProjects\\DotaTool\\npc\\heroes\\npc_dota_hero_beastmaster.txt",
+    "last_path": "",
     "dota_path": "E:\\GAME\\steamapps\\common\\dota 2 beta",
     "bot_path": "E:\\GAME\\steamapps\\workshop\\content\\570\\3246316298",
     "bot_cmd": "sv_cheats 1; script_reload_code bots/Buff/buff",
