@@ -425,7 +425,7 @@
 				"special_bonus_shard"		"-3"
 				"special_bonus_scepter"		"-9"
 			}
-				"AbilityManaCost"
+			"AbilityManaCost"
 			{
 				"value"		"115 120 125 130"
 				"special_bonus_shard"		"-25%"
