@@ -7,11 +7,11 @@ end
 
 function GPM.UpdateGold(bot, gold)
     local gameTime = Helper.DotaTime()
-
-	if gameTime < 0 then return end
-	if gameTime > 1200 then gold = gold * 2 end
-	if not bot:IsAlive() then gold = gold * 3 end
-
+	if gameTime > 300 then gold = gold + 100 end
+	if gameTime > 600 then gold = gold + 100 end
+	if gameTime > 900 then gold = gold + 100 end
+	if gameTime > 1200 then gold = gold + 100 end
+	if gameTime > 1500 then return end
 	bot:ModifyGold(gold, true, 0)
 end
 

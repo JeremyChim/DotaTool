@@ -112,8 +112,8 @@ local bBuffFlags = {
         change  = false,  -- Set to 'false' to disable changing (a) facet/s (See /Facets.lua for the heroes).
     },
     towers = {
-        radiant = true, -- Set to 'false' to disable Radiant towers buff.
-        dire    = true, -- Set to 'false' to disable Dire towers buff.
+        radiant = false, -- Set to 'false' to disable Radiant towers buff.
+        dire    = false, -- Set to 'false' to disable Dire towers buff.
     },
     neutrals = {
         radiant = true, -- Set to 'false' to disable Radiant bots receiving neutral items.
@@ -233,22 +233,22 @@ function Buff:Init()
             -- Gold and Experience
             for _, h in pairs(TeamRadiant) do
                 if bBuffFlags.gpm.radiant then
-					pcall(GPM.UpdateGold, h, 2)
+					pcall(GPM.UpdateGold, h, 100)
                 end
                 if bBuffFlags.xpm.radiant then
-                    pcall(XP.UpdateXP, h, 2)
+                    pcall(XP.UpdateXP, h, 100)
                 end
                 if bBuffFlags.attributes.radiant then
-                    pcall(Attributes.UpdateAttr, h, 1)
+                    pcall(Attributes.UpdateAttr, h, 0)
                 end
             end
 
             for _, h in pairs(TeamDire) do
                 if bBuffFlags.gpm.dire then
-                    pcall(GPM.UpdateGold, h, 4)
+                    pcall(GPM.UpdateGold, h, 300)
                 end
                 if bBuffFlags.xpm.dire then
-                    pcall(XP.UpdateXP, h, 4)
+                    pcall(XP.UpdateXP, h, 300)
                 end
                 if bBuffFlags.attributes.dire then
                     pcall(Attributes.UpdateAttr, h, 2)
@@ -256,7 +256,7 @@ function Buff:Init()
             end
         end
 
-        return 1
+        return 60
     end)
 end
 
