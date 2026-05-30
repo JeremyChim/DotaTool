@@ -3,7 +3,7 @@
     "sp": "+50%",
     "sa_cd": "-25%",
     "sp_cd": "-50%",
-    "last_path": "",
+    "last_path": "D:\\GithubProjects\\DotaTool\\npc\\heroes\\npc_dota_hero_antimage.txt",
     "dota_path": "E:\\GAME\\steamapps\\common\\dota 2 beta",
     "bot_path": "E:\\GAME\\steamapps\\workshop\\content\\570\\3246316298",
     "bot_cmd": "sv_cheats 1; script_reload_code bots/Buff/buff",
@@ -130,12 +130,12 @@
         [
             "npc_dota_goodguys_fort",
             "StatusHealthRegen",
-            "300"
+            "200"
         ],
         [
             "npc_dota_badguys_fort",
             "StatusHealthRegen",
-            "300"
+            "200"
         ]
     ]
 }
